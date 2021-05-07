@@ -16,12 +16,12 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-2">
-                            @if (Auth::id() == $micropost->user_id)
-                                {{-- 投稿削除ボタンのフォーム --}}
-                                {!! Form::open(['route' => ['microposts.destroy', $micropost->id], 'method' => 'delete']) !!}
-                                    {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
-                                {!! Form::close() !!}
-                            @endif
+                          @if (Auth::id() == $micropost->user_id)
+                              {{-- 投稿削除ボタンのフォーム --}}
+                              {!! Form::open(['route' => ['microposts.destroy', $micropost->id], 'method' => 'delete']) !!}
+                                  {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                              {!! Form::close() !!}
+                          @endif
                         </div>
                         <div class="col-sm-2">
                           {{-- お気に入り／お気に入り解除ボタン --}}
